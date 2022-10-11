@@ -10,6 +10,10 @@ class EditEmployee extends EditRecord
 {
     protected static string $resource = EmployeeResource::class;
 
+    protected function getRedirectUrl(): string{
+        return $this->getResource()::getUrl('index');
+    }
+
     protected function getActions(): array
     {
         return [
